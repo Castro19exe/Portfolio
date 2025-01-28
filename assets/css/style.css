@@ -1,13 +1,12 @@
 body {
     margin: 0;
+    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
 }
 
 .title-name {
     display: block;
-    padding: 40px 20px;
     text-align: center;
     text-decoration: none;
-    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
     font-size: 200%;
     font-weight: normal;
     color: black;margin: 0;
@@ -19,21 +18,40 @@ ul {
     justify-content: center;
     list-style-type: none;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
   
 li a {
     display: block;
-    padding: 40px 20px;
+    margin-inline: 20px;
     text-align: center;
     text-decoration: none;
-    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
     font-size: 160%;
     color: black;
 }
 
+li a:hover {
+    border-bottom: 2px solid black;
+}
+
 .img-user {
     border-radius: 100%;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
+}
+
+.btn-downloadCV {
+    padding: 20px;
+    color: rgb(53, 53, 53);
+    background-color: white;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 40px;
+}
+
+.btn-contactInfo {
+    padding: 20px;
+    color: white;
+    background-color: rgb(53, 53, 53);
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 40px;
 }
