@@ -1,15 +1,30 @@
 body {
     margin: 0;
-    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: #3c3c3c; */
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    height: 10vh;
+    background-color: black;
 }
 
 .title-name {
     display: block;
+    margin: 0;
+    /* font-family:'Courier New', 'Arial Narrow', Arial, sans-serif; */
     text-align: center;
     text-decoration: none;
     font-size: 200%;
-    font-weight: normal;
-    color: black;margin: 0;
+    color: white;
 }
 
 ul {
@@ -24,20 +39,39 @@ ul {
 li a {
     display: block;
     margin-inline: 20px;
+    /* font-family:'Courier New', 'Arial Narrow', Arial, sans-serif; */
     text-align: center;
     text-decoration: none;
-    font-size: 160%;
-    color: black;
-}
-
-li a:hover {
+    font-size: 130%;
+    color: white;
     border-bottom: 2px solid black;
 }
 
+li a:hover {
+    /* border-bottom: 2px solid white; */
+}
+
+.main-section-structure {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5vw; 
+    height: 90vh;
+}
+
+.section-structure {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10vw; 
+    height: 100vh;
+}
+
 .img-user {
-    border-radius: 100%;
-    width: 400px;
-    height: 400px;
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
 }
 
 .btn-downloadCV {
@@ -46,6 +80,13 @@ li a:hover {
     background-color: white;
     border: 2px solid rgb(53, 53, 53);
     border-radius: 40px;
+    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.btn-downloadCV:hover {
+    color: white;
+    background-color: rgb(53, 53, 53);
 }
 
 .btn-contactInfo {
@@ -54,4 +95,28 @@ li a:hover {
     background-color: rgb(53, 53, 53);
     border: 2px solid rgb(53, 53, 53);
     border-radius: 40px;
+    font-family:'Corbel', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
 }
+
+.btn-contactInfo:hover {
+    color: rgb(53, 53, 53);
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    background-color: #ddd;
+}
+  
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.html {width: 90%; background-color: #f44336;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f4e736;}
+.php {width: 60%; background-color: #808080;}
