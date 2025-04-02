@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Portfólio | João Castro</title>
+    <title>Portfólio | Joāo Castro</title>
+    <link rel="icon" href="./assets/img/icon.png">
 </head>
 <body>
     <section>
@@ -13,22 +14,23 @@
             <label class="title-name">Joāo Castro</label>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <ul>
-                <li><a href=""><i class="fa fa-linkedin-square" style="font-size: 40px; color: white"></i></a></li>
-                <li><a href=""><i class="fa fa-instagram" style="font-size: 40px; color: white"></i></a></li>
-            </ul>
+            <div>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-de-castro-0629b41b2/"><i class="fa fa-linkedin-square" style="font-size: 40px; color: white"></i></a>
+                <a href="https://github.com/Castro19exe"><i class="fa fa-github" style="font-size: 40px; color: white"></i></a>
+                <a href=""><i class="fa fa-instagram" style="font-size: 40px; color: white"></i></a>
+            </div>
         </nav>
         <section class="main-section-structure">
-            <div align="center">
+            <div class="text-center">
                 <h4>Hello, I'm </h4>
-                <h1>João Castro</h1>
+                <h1>Joāo Castro</h1>
                 <h1>Full-Stack Developer</h1>
                 <div style="display: flex; justify-content: center; gap: 1vw;">
-                    <a href="./documents/CV.pdf" type="application/pdf" class="btn-downloadCV" download>Download CV</a>
+                    <a href="documents/CV.pdf" class="btn-downloadCV" download>Download CV</a>
                     <a href="#contact" class="btn-contactInfo">Contact Info</a>
                 </div>
             </div>
@@ -36,35 +38,78 @@
         </section>
     </section>
     <section class="section-structure" id="experience">
-        <div style="width: 90vw;">
-            <h1>My Skills</h1>
-
-            <p>HTML</p>
-            <div class="container">
-            <div class="skills html">90%</div>
+        <h1 class="section-title">Skills</h1>
+        <div style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+            <div class="progress-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke="#e6e6e6" stroke-width="10" fill="none" />
+                    <circle id="progress" cx="80" cy="80" r="70" stroke="url(#GradientColor)" stroke-width="10" fill="none" 
+                            stroke-dasharray="439.82" stroke-dashoffset="439.82" />
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" id="progress-value">0%</text>
+                </svg>
             </div>
-
-            <p>CSS</p>
-            <div class="container">
-            <div class="skills css">80%</div>
+            <div class="progress-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke="#e6e6e6" stroke-width="10" fill="none" />
+                    <circle id="progress" cx="80" cy="80" r="70" stroke="url(#GradientColor)" stroke-width="10" fill="none" 
+                            stroke-dasharray="439.82" stroke-dashoffset="439.82" />
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" id="progress-value">0%</text>
+                </svg>
             </div>
-
-            <p>JavaScript</p>
-            <div class="container">
-            <div class="skills js">65%</div>
+            <div class="progress-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke="#e6e6e6" stroke-width="10" fill="none" />
+                    <circle id="progress" cx="80" cy="80" r="70" stroke="url(#GradientColor)" stroke-width="10" fill="none" 
+                            stroke-dasharray="439.82" stroke-dashoffset="439.82" />
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" id="progress-value">0%</text>
+                </svg>
             </div>
-
-            <p>PHP</p>
-            <div class="container">
-            <div class="skills php">60%</div>
+            <div class="progress-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke="#e6e6e6" stroke-width="10" fill="none" />
+                    <circle id="progress" cx="80" cy="80" r="70" stroke="url(#GradientColor)" stroke-width="10" fill="none" 
+                            stroke-dasharray="439.82" stroke-dashoffset="439.82" />
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" id="progress-value">0%</text>
+                </svg>
             </div>
         </div>
     </section>
     <section class="section-structure" id="projects">
-        <h1>Projects</h1>
+        <h1 class="section-title">Projects</h1>
+        <div style="display: grid;grid-template-columns: repeat(4, 1fr); gap: 15px; justify-items: center; padding: 10px;">
+            <a href="" class="project-container"><img src="assets/img/background2.jpg" class="project-img"></a>
+            <a href="" class="project-container"><img src="assets/img/background2.jpg" class="project-img"></a>
+            <a href="" class="project-container"><img src="assets/img/background2.jpg" class="project-img"></a>
+            <a href="https://github.com/Castro19exe/deCastro" class="project-container"><img src="assets/img/deCastro.png" class="project-img"></a>
+            <a href="https://github.com/Castro19exe/HistoricalMod" class="project-container"><img src="assets/img/historicalMod.png" class="project-img"></a>
+        </div>
     </section>
     <section class="section-structure" id="contact">
-        <h1>Contact</h1>
+        <h1 class="section-title">Contact</h1>
     </section>
 </body>
 </html>
