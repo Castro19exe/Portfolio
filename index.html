@@ -157,45 +157,49 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
+        document.addEventListener("DOMContentLoaded", function() {
+            const linkSkills = document.getElementById("link-skills");
+            if (linkSkills) {
+                linkSkills.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const section = document.getElementById("skills");
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    const scrollTo = sectionTop - (windowHeight / 2) + (sectionHeight / 2);
+                    window.scrollTo({
+                        top: scrollTo,
+                        behavior: "smooth"
+                    });
+                });
+            }
 
-        (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); 
-        })();
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener("click", function(event) {
+                    const targetId = this.getAttribute("href"); 
+                    if (targetId.startsWith("#")) {
+                        event.preventDefault();
+                        const section = document.querySelector(targetId);
+                        const navbarHeight = document.querySelector('.nav-menu').offsetHeight;
 
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-            .then(() => { alert("Message sent successfully!"); }, (err) => { alert("Error sending message: " + JSON.stringify(err)); });
-        });
+                        let scrollTo;
 
-
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener("click", function(event) {
-                const targetId = this.getAttribute("href"); 
-                if (targetId.startsWith("#")) {
-                    event.preventDefault(); // impede o salto normal
-                    const section = document.querySelector(targetId);
-
-                    if (targetId === "#skills") {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.offsetHeight;
-                        const windowHeight = window.innerHeight;
-
-                        const scrollTo = sectionTop - (windowHeight / 2) + (sectionHeight / 2);
+                        if (targetId === "#skills") {
+                            // centro da secção
+                            scrollTo = section.offsetTop - (window.innerHeight / 2) + (section.offsetHeight / 2);
+                        } else {
+                            // topo da secção, mas acima da navbar
+                            scrollTo = section.offsetTop - navbarHeight;
+                        }
 
                         window.scrollTo({
                             top: scrollTo,
                             behavior: "smooth"
                         });
-                    } else {
-                        // comportamento normal (scroll para o topo da secção)
-                        section.scrollIntoView({ behavior: "smooth" });
                     }
-                }
+                });
             });
         });
-
-
     </script>
 </body>
 </html>
