@@ -10,35 +10,33 @@
     <title>Portfólio - Joāo Castro</title>
 </head>
 <body>
-    <section>
+    <section class="main-section-structure" id="about">
         <nav class="nav-menu">
             <label class="title-name">Joāo Castro</label>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills" id="link-skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div>
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-de-castro-0629b41b2/"><i class="fa fa-linkedin-square" style="font-size: 40px; color: white"></i></a>
-                <a href="https://github.com/Castro19exe"><i class="fa fa-github" style="font-size: 40px; color: white"></i></a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-de-castro-0629b41b2/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 40px; color: white"></i></a>
+                <a href="https://github.com/Castro19exe" target="_blank"><i class="fa fa-github" style="font-size: 40px; color: white"></i></a>
             </div>
         </nav>
-        <section class="main-section-structure">
-            <div class="text-center">
-                <h4>Hello, I'm </h4>
-                <h1>Joāo Castro</h1>
-                <h1>Full-Stack Developer</h1>
-                <div style="display: flex; justify-content: center; gap: 1vw;">
-                    <a href="documents/CVJoaoCastro.pdf" class="btn-downloadCV" download>Download CV</a>
-                    <a href="#contact" class="btn-contactInfo">Contact Info</a>
-                </div>
+        <div class="text-center">
+            <h4>Hello, I'm </h4>
+            <h1>Joāo Castro</h1>
+            <h1>Full-Stack Developer</h1>
+            <div style="display: flex; justify-content: center; gap: 1vw;">
+                <a href="documents/CVJoaoCastro.pdf" class="btn-downloadCV" download>Download CV</a>
+                <a href="#contact" class="btn-contactInfo">Contact Info</a>
             </div>
-            <div>
-                <img src="assets/img/jc.jpg" alt="Personal Photo" class="img-user">
-            </div>
-        </section>
+        </div>
+        <div>
+            <img src="assets/img/jc.jpg" alt="Personal Photo" class="img-user">
+        </div>
     </section>
     <section class="section-structure" id="experience">
         <h1 class="section-title">Experience</h1>
@@ -74,9 +72,10 @@
             <img src="https://devicon-website.vercel.app/api/mysql/original-wordmark.svg" alt="MySQL">
             <img src="https://devicon-website.vercel.app/api/laravel/plain.svg" alt="Laravel">
             <img src="https://devicon-website.vercel.app/api/dotnetcore/original.svg" alt=".NET Core">
-            <img src="https://devicon-website.vercel.app/api/googlecloud/original.svg" alt="Google Cloud">
+            <img src="https://devicon-website.vercel.app/api/googlecloud/original.svg" alt="Google Cloud Platform">
+            <img src="https://devicon-website.vercel.app/api/wordpress/plain.svg?color=%2328799E" alt="WordPress">
             <img src="https://devicon-website.vercel.app/api/blender/original.svg" alt="Blender">
-            <img src="https://devicon-website.vercel.app/api/github/original.svg" alt="GitHub">
+            <img src="https://devicon-website.vercel.app/api/git/original.svg" alt="Git">
         </div>
     </section>
     <section class="section-structure" id="projects">
@@ -168,6 +167,35 @@
             emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
             .then(() => { alert("Message sent successfully!"); }, (err) => { alert("Error sending message: " + JSON.stringify(err)); });
         });
+
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener("click", function(event) {
+                const targetId = this.getAttribute("href"); 
+                if (targetId.startsWith("#")) {
+                    event.preventDefault(); // impede o salto normal
+                    const section = document.querySelector(targetId);
+
+                    if (targetId === "#skills") {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.offsetHeight;
+                        const windowHeight = window.innerHeight;
+
+                        const scrollTo = sectionTop - (windowHeight / 2) + (sectionHeight / 2);
+
+                        window.scrollTo({
+                            top: scrollTo,
+                            behavior: "smooth"
+                        });
+                    } else {
+                        // comportamento normal (scroll para o topo da secção)
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                }
+            });
+        });
+
+
     </script>
 </body>
 </html>
